@@ -2,44 +2,50 @@ body{
     margin: 0px;
     padding: 0px;
    /* background: #f3f5fc; */
-   background-image: radial-gradient(circle at 8.75% 61.05%, #008dff 0, #0087ff 7.14%, #0081ff 14.29%, #417aff 21.43%, #7172fb 28.57%, #9169f1 35.71%, #aa5fe5 42.86%, #be55d8 50%, #cf4ac9 57.14%, #dc40ba 64.29%, #e735a9 71.43%, #ef2c98 78.57%, #f42787 85.71%, #f72675 92.86%, #f72b64 100%);
-}
-.container{
-    margin:auto;
-    width: 960px;
-    height: 650px;
-    padding: 5px;
-}
+    background-image: radial-gradient(circle at 8.75% 61.05%, #008dff 0, #0087ff 7.14%, #0081ff 14.29%, #417aff 21.43%, #7172fb 28.57%, #9169f1 35.71%, #aa5fe5 42.86%, #be55d8 50%, #cf4ac9 57.14%, #dc40ba 64.29%, #e735a9 71.43%, #ef2c98 78.57%, #f42787 85.71%, #f72675 92.86%, #f72b64 100%);
+ }
 .logo{
     width: 100%;
-    float: left;
-    
+    float: left;   
+}
+.container{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    margin:auto;
+    width: 80%;
+    height: auto;
+    padding: 5px;
+}
+.subContainer{
+    display: flex;
+    flex-direction: column;
+    width: 60%;
 }
 .izquierda{
     float: left;
-    width: 70%;
+    width: 100%;
     height: 70%;
     border-radius: 24px;
 }
+.cajaBotones{
+    width: 100%;
+    height: auto;
+    border-radius: 24px;
+}
+.subCajaBotones{
+    display: flex;
+}
 .derecha{
+    flex: 1 0 130px;
     float: right;
-    width: 30%;
+    min-width: 30%;
     height: auto;
     border-radius: 24px;
     background-color: white;
     opacity: 85%;
     border-radius: 10px;
     box-shadow: 10px 5px 5px black;
-}
-.left-button{
-    float: left;
-    width: 70%;
-    height: auto;
-    border-radius: 24px;
-}
-.title{
-    margin-left: 20%;
-    float: inherit;
 }
 .logoImg{
     margin-top: 1%;
@@ -49,10 +55,11 @@ body{
 }
 .text-input{
     float: left;
-    margin-left: 10%;
-    margin-top: 10%;
-    width: 80%;
-    height: 80%;
+    margin-left: 5%;
+    margin-top: 0%;
+    margin-bottom: 0%;
+    width: 90%;
+    height: 100%;
     color: #0a3871;
     font-size: 20px;
     border: none;
@@ -63,25 +70,26 @@ body{
     border: 0px;
 }
 #imgDer{
-    margin-left: 2%;
+    margin-left: 10%;
     margin-top: 20%;
-    width: 90%;
-    height: auto;
-    
+    width: 60%;
+    height: auto;  
 }
 #texto{
     margin-left: 7%;
     margin-right: 5%;
+
+    width: 80%;
+    height: auto;
 }
 #texto2{
     float: left;
     margin-left: 10%;
     color: #0a3871;
     width: 80%;
-    height: 60%;
+    height: auto;
     border: none;
     outline: none;
-    font-size: 15px;
 }
 .parrafo{
     color: #d8dfe8;
@@ -90,11 +98,11 @@ body{
     background-color: darkblue; 
     border: none;
     color: white;
-    padding: 15px 32px;
+    padding: 1em 1em;
     text-align: center;
     text-decoration: none;
     display: inline-block;
-    font-size: 16px;
+    font-size: 1em;
     border-radius: 10px;
     border: 2px solid darkblue;
     margin: 0em 4% 0em 0em;
@@ -108,11 +116,11 @@ body{
     background-color: #d8dfe8; 
     border: 2px solid darkblue;
     color: darkblue;
-    padding: 15px 32px;
+    padding: 1em 1em;
     text-align: center;
     text-decoration: none;
     display: inline-block;
-    font-size: 16px;
+    font-size: 1em;
     border-radius: 10px;
     width: 47%;
     transition: 0.6s all;
@@ -128,14 +136,80 @@ body{
     text-align: center;
     text-decoration: none;
     display: inline-block;
-    font-size: 16px;
+    font-size: 1em;
     border-radius: 10px;
     width: 47%;
     transition: 0.6s all;
-    margin-left: 33%;
-    margin-top: 90%;
+    margin-left: 25%;
+    margin-top: 80%;
     display: none;
 }
 #copiar:hover{
     transform: scale(1.2);
+}
+.parrafo{
+    text-align: center;
+}
+/* PRUEBAS */
+@media screen and (max-width: 768px) {
+    /* Ajustar el tamaño del logo y su título */
+    .logo {
+        text-align:left;
+    }
+    .logoImg {
+        width: 20%;
+    }
+    /* Ajustar los estilos del contenedor */
+    .container {
+        width: 90%;
+        margin: 0 auto;
+    }
+    .subContainer{
+        width: 100%;
+    }
+    
+    /* Ajustar los estilos de los elementos de la izquierda */
+    .izquierda {
+        width: 100%;
+    }
+    .text-input {
+        margin: 0% 15% 10% 15%;
+        width: 70%;
+        height: 19em;
+
+    }
+    
+    /* Ajustar los estilos de los elementos de la derecha */
+    .derecha {
+        width: 100%;
+        text-align: center;
+    }
+}
+#imgDer{
+    display: none;
+}
+@media screen and (max-width: 481px) {
+    .subCajaBotones{
+        display: flex;
+        flex-direction: column;
+    }
+    #btn-encriptar{
+        width: 90%;
+        text-align: center;
+        margin: auto;
+    }
+    #btn-desencriptar{
+        width: 90%;
+        text-align: center;
+        margin: auto;
+    }
+}
+@media screen and (min-width: 769px){
+    .logoImg{
+        width: 20%;
+    }
+    #imgDer{
+        display: inline;
+    }
+
 }

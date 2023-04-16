@@ -9,13 +9,21 @@
     <title>Encriptador</title>
 </head>
 <body>
-    <div class="container" >
         <div class="logo" >
             <img class="logoImg" src="img/Logo.png" alt="logo">
-            <h1 class="title">Encriptador de Mensajes</h1>
         </div>
-        <div class="izquierda" >
-            <textarea class="text-input" id="inputTexto" type="text" placeholder="Ingrese el texto aqui"></textarea>
+    <div class="container" >
+        <div class="subContainer">
+            <div class="izquierda" >
+                <textarea class="text-input" id="inputTexto" type="text" placeholder="Ingrese el texto aqui"></textarea>
+            </div>
+            <div class="cajaBotones">
+                <p class="parrafo"> &#9888; Solo letras minusculas, sin acentos</p>
+                <div class="subCajaBotones" >
+                    <button type="button" id="btn-encriptar" onclick="encriptar()">Encriptar</button>
+                    <button type="button" id="btn-desencriptar" onclick="desencriptar()">Desencriptar</button>
+                </div>
+            </div>
         </div>
         <div class="derecha">
             <img src="img/Muñeco.png" alt="" id="imgDer">
@@ -23,13 +31,12 @@
             <textarea name="name" id="texto2" cols="80" rows="8">Ingrese el texto que deseas encriptar o desencriptar</textarea>
             <button id="copiar" onclick="cop()" type="button" name="button">Copiar!</button>
         </div>
-        <div class="left-button">
-            <p class="parrafo"> &#9888; Solo letras minusculas, sin acentos</p>
-            <button type="button" id="btn-encriptar" onclick="encriptar()">Encriptar</button>
-            <button type="button" id="btn-desencriptar" onclick="desencriptar()">Desencriptar</button>
-
-        </div>
-
+        
     </div>
+    <footer>
+        <div>
+            <h2 class="parrafo">Creado Por Camilo Palacios</h2>
+        </div>
+    </footer>
 </body>
 </html>
